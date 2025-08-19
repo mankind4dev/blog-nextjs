@@ -1,16 +1,14 @@
 import PostList from "@/components/post/post-list";
 import { getAllPosts } from "@/lib/db/queries";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Next.js 15 blog",
-  description: "My New blog app",
+  description: "My New blog app using Next.js Typescript",
 };
 
 export default async function Home() {
-  const posts = await getAllPosts();
-
-  console.log("Nes post:", posts);
+  const posts = await getAllPosts(); 
 
   return (
     <main className="py-10">
